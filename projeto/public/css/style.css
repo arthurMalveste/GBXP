@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+  background-color: #ED4533;
+  color: white;
+}
+
+body {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: 100vh;
+    background-color: #737680;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+a::selection {
+    background-color: #ED4533;
+    color: white;
+}
+
+.sec-1 {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 15px;
+}
+
+.sec-1-1p {
+    margin-left: 30px;
+}
+
+.sec-1-2p {
+    margin-right: 30px;
+    display: flex;
+}
+
+.titulo {
+    font-size: 50px;
+    color: white;
+}
+
+.li-nav {
+    padding: 0 10px;
+    color: white;
+}
+
+.a-nav {
+    color: white;
+    font-size: 20px;
+}
+
+.ul-nav {
+    display: flex;
+}
+
+.logo {
+    height: 150px;
+    width: auto;
+    margin: 20px;
+}
+
+.conta {
+    height: 50px;
+    width: auto;
+}
+
+.h2-conta {
+    margin: 11px 0 0 0;
+    padding: 0 0 0 10px;
+    text-decoration: none;
+    
+}
+
+h1 {
+    font-size: 250%;
+    color: antiquewhite;
+}
+
+.h2-games {
+    padding: 0 8% 2% 8%;
+    font-size: 200%;
+    color: aliceblue;
+}
+
+.a-conta {
+    text-decoration: none;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+.a-li {
+    color: white;
+    font-size: 18px;
+}
+
+.icon-shop {
+    height: 40px;
+    max-width: auto;
+    padding-right: 10px;
+}
+
+.sec-3-1p {
+    display: flex;
+    margin: 0 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+p {
+    padding: 0 8%;
+    word-break: break;
+    width: 16%;
+    text-align: center;
+}
+
+p::selection {
+    background-color: #ED4533;
+    color: white;
+}
+
+.sec-3-1p-0 {
+    padding: 0 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sec-3-2p {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.sec-3-h1 {
+    display: flex;
+    text-align: center;
+    padding: 0 35px;
+    font-size: 185%;
+    color: white;
+}
+
+ /* Carrossel teste */
+
+ .wrapper {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+    margin-right: 4%;
+  }
+  .wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+  }
+
+  .carousel-h3 {
+    margin: -30px 0;
+    max-height: 30px;
+  }
+
+  .wrapper i:active{
+    transform: translateY(-50%) scale(0.85);
+  }
+  .wrapper i:first-child{
+    left: -22px;
+  }
+  .wrapper i:last-child{
+    right: -22px;
+  }
+  .wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel.no-transition {
+    scroll-behavior: auto;
+  }
+
+  .carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+
+  .carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+  }
+
+  .carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel .card {
+    scroll-snap-align: start;
+    height: 450px;
+    list-style: none;
+    background: #4d4d4d;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 5px;
+    justify-content: space-around;
+  }
+  
+  .carousel .card .img {
+    background: #8B53FF;
+    height: 148px;
+    width: 148px;
+    border-radius: 50%;
+  }
+
+  .card .img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 2px solid #fff;
+  }
+
+  .carousel .card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+  }
+
+  .carousel .card span {
+    color: #6A6D78;
+    font-size: 1.31rem;
+  }
+  
+/* Fim do carousel */
+
+.sec-3-gifs {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.sec-4 {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #737680;
+}
+.sec-4-img {
+  height: 500px;
+  max-width: auto;
+  margin: 30px 15px;
+  transform: skew(-10deg);
+  box-shadow: 12px 12px aqua;
+}
+
+.sec-5-produtos {
+  height: auto;
+  width: 100%;
+}
+
+
+  @media screen and (max-width: 900px) {
+    .wrapper .carousel {
+      grid-auto-columns: calc((100% / 2) - 9px);
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .wrapper .carousel {
+      grid-auto-columns: 100%;
+    }
+  }
