@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="midia/img/icon.ico" type="image/x-icon">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/animacao.css">
+</head>
+<body>
+    <video autoplay loop muted>
+      <source src="midia/video/Super Mario Bros HD REMAKE 2020 Part 1.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos HTML5.
+    </video>
+    <div class="container-form">
+      <form class="form uianimated delay-200">
+    
+          <label for="nome">Nome:</label>
+          
+            <input type="text" class="infos" id="nome" name="nome">
+          <div class="mario"></div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email">
+      
+            <a href="#"><button type="button" id="botao-coin" >Send</button></a>
+            <button type="reset" id="botao-pipe" class="limpar">Clear</button>
+      
+      
+      </form>
+    </div>
+    <audio src="midia/audio/coin.wav" id="coin"></audio>
+    <audio src="midia/audio/pipe.wav" id="pipe"></audio>
+
+      
+  <script>
+    function uianimated() {
+  var uianimateds = document.querySelectorAll('.uianimated');
+
+  for (var i = 0; i < uianimateds.length; i++) {
+    var windowheight = window.innerHeight;
+    var uianimatedtop = uianimateds[i].getBoundingClientRect().top;
+    var uianimatedpoint = 40;
+
+    if (uianimatedtop < windowheight - uianimatedpoint) {
+      uianimateds[i].classList.add('active');
+    } else {
+      uianimateds[i].classList.remove('active');
+    }
+  }
+}
+
+function onPageload() {
+  uianimated();
+  window.addEventListener('scroll', uianimated);
+}
+
+window.addEventListener('load', onPageload);
+  </script>
+
+    <script src="js/cadastroEloja.js"></script>
+</body>
+</html>

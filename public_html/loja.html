@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Loja</title>
+    <link rel="stylesheet" href="css/loja.css">
+    <link rel="stylesheet" href="css/animacao.css">
+    <link rel="shortcut icon" href="midia/img/icon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+  <body>
+    <section class="sec-1">
+      <div class="sec-1-1p">
+          <a href="#" class="titulo" >GB XP</a>
+      </div>
+      <div class="sec-1-2p">
+          <ul class="ul-nav">
+              <li class="li-nav"><a class="a-nav" href="index.html">Voltar</a></li>
+              <li class="li-nav"><a class="a-nav" href="#">Loja</a></li>
+              <li class="li-nav"><a class="a-nav" href="cadastro.html">Cadastro</a></li>
+              <li class="li-nav"><a class="a-nav" download href="downloads/convite.png">Convite</a></li>
+          </ul>
+      </div>
+  </section>
+   <main>
+    <div class="wrapper uianimated delay-200" id="wrapper1">
+      <div class="card">
+        <img src="midia/img/blusa com saia com fundo.jpg" alt="">
+        <div class="content">
+          <div class="row">
+            <div class="details">
+              <span>Casaco Fashion Feminino</span>
+              <p>Premium casaco EDIÇÃO LIMITADA</p>
+            </div>
+            <div class="price">R$109,99</div>
+          </div>
+          <div class="buttons">
+            <button>Compre Agora</button>
+            <button class="cart-btn">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="midia/img/blusa feminina com fundo.jpg" alt="">
+        <div class="content">
+          <div class="row">
+            <div class="details">
+              <span>Casaco simples Feminino</span>
+              <p>Casaco simples e barato para você ficar no estilo</p>
+            </div>
+            <div class="price">R$49,99</div>
+          </div>
+          <div class="buttons">
+            <button>Compre Agora</button>
+            <button class="cart-btn">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="midia/img/blusa preta com fundo.jpg" alt="">
+        <div class="content">
+          <div class="row">
+            <div class="details">
+              <span>Casaco Masculino</span>
+              <p>Nem muito simples e nem muito exclusivo</p>
+            </div>
+            <div class="price">R$69,99</div>
+          </div>
+          <div class="buttons">
+            <button>Compre Agora</button>
+            <button class="cart-btn">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper uianimated delay-200"  >
+      <div class="card">
+        <img src="midia/img/canecapng.png" alt="" class="img-dif" id="caneca" >
+        <div class="content">
+          <div class="row">
+            <div class="details">
+              <span>Caneca Personalizada</span>
+              <p>Caneca personalizada EDIÇÃO LIMITADA</p>
+            </div>
+            <div class="price">R$23,99</div>
+          </div>
+          <div class="buttons">
+            <button>Compre Agora</button>
+            <button class="cart-btn">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="midia/img/acessoriocellpng.png" class="img-dif" alt="" id="acecel" >
+        <div class="content">
+          <div class="row">
+            <div class="details">
+              <span>Acessório para Celular</span>
+              <p>Acessório para celular super da moda</p>
+            </div>
+            <div class="price">R$9,99</div>
+          </div>
+          <div class="buttons">
+            <button>Compre Agora</button>
+            <button class="cart-btn">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="midia/img/brochepng.png" class="img-dif" alt="" id="broche">
+        <div class="content">
+          <div class="row">
+            <div class="details">
+              <span>Broche</span>
+              <p>Nunca sai da moda o broche da GBXP</p>
+            </div>
+            <div class="price">R$1,00</div>
+          </div>
+          <div class="buttons">
+            <button>Compre Agora</button>
+            <button class="cart-btn">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <script>
+    function uianimated() {
+  var uianimateds = document.querySelectorAll('.uianimated');
+
+  for (var i = 0; i < uianimateds.length; i++) {
+    var windowheight = window.innerHeight;
+    var uianimatedtop = uianimateds[i].getBoundingClientRect().top;
+    var uianimatedpoint = 40;
+
+    if (uianimatedtop < windowheight - uianimatedpoint) {
+      uianimateds[i].classList.add('active');
+    } else {
+      uianimateds[i].classList.remove('active');
+    }
+  }
+}
+
+function onPageload() {
+  uianimated();
+  window.addEventListener('scroll', uianimated);
+}
+
+window.addEventListener('load', onPageload);
+  </script>
+
+    <script src="js/cadastroEloja.js"></script>
+
+  </body>
+</html>
